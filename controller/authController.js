@@ -120,3 +120,15 @@ export const loginController = async (req, res) => {
 
     }
 }
+
+export const testController = (req, res) => {
+    try {
+
+        return res.send("protected routes")
+
+    } catch (error) {
+
+        console.log(error)
+
+    }
+}
