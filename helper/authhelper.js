@@ -8,7 +8,18 @@ export const hashpassword = async (password) => {
         return hashedPassword
 
     } catch (error) {
-        console.log('error')
+        console.log(error)
+    }
+
+}
+
+export const comparePassword = async (password, hashedPassword) => {
+    try {
+
+        return bcrypt.compare(password, hashedPassword)
+
+    } catch (error) {
+        console.log('error while comparing password' + error)
     }
 
 }
