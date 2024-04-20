@@ -47,7 +47,7 @@ export const registerController = async (req, res) => {
 
         res.send({
             success: true,
-            message: 'User registred Successfully',
+            message: 'User Registred Successfully',
             user: {
                 name,
                 email,
@@ -62,7 +62,7 @@ export const registerController = async (req, res) => {
         console.log(error)
         return res.send({
             success: false,
-            message: 'error in Registration of user',
+            message: 'Error In Registration Of User',
             error
         })
 
