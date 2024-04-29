@@ -4,6 +4,7 @@ import cors from 'cors'
 import connectDB from './config/db.js'
 import authRouter from './routes/authRouter.js'
 import categoryRouter from './routes/categoryRouter.js'
+import productRouter from './routes/productRouter.js'
 
 const PORT = 8080
 
@@ -14,12 +15,13 @@ connectDB()
 const app = express()
 
 app.use(express.json());
-app.use(cors())
+app.use(cors());
 
 
 //routing for user 
 app.use('/api/v1/user', authRouter)
 app.use('/api/v1/category', categoryRouter)
+app.use('/api/v1/product', productRouter)
 
 // demo path 
 app.get('/', (req, res) => {
